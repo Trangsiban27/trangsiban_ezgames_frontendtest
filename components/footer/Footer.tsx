@@ -30,7 +30,7 @@ const Footer = () => {
         <footer
             className='bg-[#2a2321] relative bottom-0 left-0 right-0 flex items-center justify-center w-full'
         >
-            <div className='md:w-7xl w-full md:pt-10 md:pb-20 px-6 py-26 grid md:grid-cols-5 gap-6'>
+            <div className='lg:w-7xl w-full lg:pt-10 lg:pb-20 px-6 py-26 grid lg:grid-cols-5 gap-6'>
                 <div className='flex flex-col gap-4'>
                     <div className='flex items-center gap-2'>
                         <span className='bg-[#be932e] px-3 py-1.5 rounded-full font-bold'>P</span>
@@ -85,7 +85,7 @@ const Footer = () => {
             </div>
 
             <div className='absolute bottom-0 left-0 right-0 border-t py-4 flex items-center justify-center'>
-                <div className='flex md:flex-row flex-col gap-y-2 items-center justify-between w-7xl'>
+                <div className='flex lg:flex-row flex-col gap-y-2 items-center justify-between w-7xl'>
                     <div className='flex items-center gap-2'>
                         <span className='text-white/80 font-bold text-xs'>2026 Pages & Co.</span>
 

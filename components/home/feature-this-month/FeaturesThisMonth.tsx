@@ -5,7 +5,7 @@ import React from 'react'
 
 const FeaturesThisMonth = () => {
     return (
-        <div>
+        <section>
             <ListHeader
                 subTitle={`Editor's Picks`}
                 title='Featured this month'
@@ -13,12 +13,12 @@ const FeaturesThisMonth = () => {
                 viewAllUrl=''
             />
 
-            <div className='grid grid-cols-5 gap-6 mt-6'>
+            <div className='grid lg:grid-cols-5 md:grid-cols-2 gap-6 mt-6'>
                 {FEATURES.map((item) => (
                     <ProductCard key={item?.id} data={item} />
                 ))}
             </div>
-        </div>
+        </section>
     )
 }
 

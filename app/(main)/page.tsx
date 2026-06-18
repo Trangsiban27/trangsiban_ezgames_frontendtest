@@ -8,7 +8,7 @@ import React from 'react'
 
 const page = () => {
     return (
-        <div className='my-25 w-7xl flex flex-col gap-14'>
+        <div className='my-25 lg:w-7xl w-full flex flex-col gap-14'>
             <Carousel />
 
             <section className=''>

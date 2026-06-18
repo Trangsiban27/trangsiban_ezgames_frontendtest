@@ -17,12 +17,12 @@ const Header = () => {
 
     return (
         <header className='fixed top-0 left-0 right-0 p-4 border-b flex items-center justify-center font-sans bg-background z-10'>
-            <div className='md:w-7xl w-full flex items-center md:justify-around justify-between'>
+            <div className='lg:w-7xl w-full flex items-center lg:justify-around justify-between'>
                 <div className='flex'>
                     <Button
                         variant={'ghost'}
                         onClick={() => setIsOpen(!isOpen)}
-                        className='flex md:hidden'
+                        className='flex lg:hidden'
                     >
                         <Menu width={20} />
                     </Button>
@@ -36,7 +36,7 @@ const Header = () => {
                     </div>
                 </div>
 
-                <nav className='hidden md:flex items-center justify-center gap-6'>
+                <nav className='hidden lg:flex items-center justify-center gap-6'>
                     {NAV_ITEMS.map((item, index) => (
                         <Link key={index} href={item?.url} className='text-sm'>
                             {item?.label}

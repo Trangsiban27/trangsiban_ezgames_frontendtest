@@ -7,9 +7,9 @@ const layout = ({ children }: { children: React.ReactNode }) => {
         <div className='bg-background flex flex-col items-center justify-center'>
             <Header />
 
-            {/* <main className=''>
+            <main className='lg:w-7xl w-full px-6'>
                 {children}
-            </main> */}
+            </main>
 
             <Footer />
         </div>

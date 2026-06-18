@@ -11,7 +11,7 @@ interface Props {
 
 const ListHeader = ({ subTitle, title, hasViewAll = false, viewAllUrl = '' }: Props) => {
     return (
-        <div className='flex items-end justify-between'>
+        <div className='flex md:flex-row flex-col md:items-end justify-between'>
             <div>
                 <h6 className='font-semibold font-heading text-xs text-primary uppercase'>{subTitle}</h6>
                 <h1 className='font-bold text-3xl'>{title}</h1>

@@ -13,7 +13,7 @@ const NewArrivals = () => {
                 viewAllUrl=''
             />
 
-            <div className='grid grid-cols-5 gap-6 mt-6 '>
+            <div className='grid lg:grid-cols-5 md:grid-cols-2 gap-6 mt-6 '>
                 {NEW_ARRIVALS.map((item) => (
                     <ProductCard key={item?.id} data={item} />
                 ))}

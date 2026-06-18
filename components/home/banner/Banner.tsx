@@ -3,7 +3,7 @@ import React from 'react'
 
 const Banner = () => {
     return (
-        <section className='rounded-md bg-[#385642] p-12 flex items-center justify-between'>
+        <section className='rounded-md bg-[#385642] md:p-12 p-6 flex md:flex-row flex-col md:items-center justify-between'>
             <div className='flex flex-col gap-2'>
                 <span className='font-heading uppercase text-white/80 text-xs font-bold'>The reading room</span>
 
@@ -18,7 +18,7 @@ const Banner = () => {
                 </div>
             </div>
 
-            <Button className='bg-[#c2922c] p-4 px-6 font-semibold rounded-4xl text-black cursor-pointer'>
+            <Button className='bg-[#c2922c] mt-6 md:mt-0 p-4 px-6 font-semibold rounded-4xl text-black cursor-pointer'>
                 <span className='text-xs'>Join free</span>
             </Button>
         </section>

@@ -11,7 +11,7 @@ const GenreList = () => {
                 title='Browse by genre'
             />
 
-            <div className='grid grid-cols-6 gap-6 mt-6'>
+            <div className='grid lg:grid-cols-6 md:grid-cols-3 grid-cols-2 gap-6 mt-6'>
                 {GENRE_ITEMS.map((item, index) => (
                     <GenreItem key={index} data={item} />
                 ))}

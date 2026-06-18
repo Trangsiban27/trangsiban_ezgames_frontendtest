@@ -13,7 +13,7 @@ const BestSeller = () => {
                 viewAllUrl=''
             />
 
-            <div className='grid grid-cols-5 gap-6 mt-6'>
+            <div className='grid lg:grid-cols-5 grid-cols-2 gap-6 mt-6'>
                 {BESTSELLER.map((item) => (
                     <ProductCard key={item?.id} data={item} />
                 ))}
