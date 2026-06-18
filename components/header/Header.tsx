@@ -1,23 +1,42 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar'
 import Link from 'next/link'
 import { NAV_ITEMS } from '@/constants'
 import SearchBar from '../common/SearchBar'
 import { Button } from '../ui/button'
+import { Menu } from 'lucide-react'
+import Sidebar from './Sidebar'
 
 const Header = () => {
+    const [isOpen, setIsOpen] = useState(false)
+
+    const handleCloseSidebar = () => {
+        setIsOpen(false)
+    }
+
     return (
         <header className='fixed top-0 left-0 right-0 p-4 border-b flex items-center justify-center font-sans bg-background z-10'>
-            <div className='w-7xl flex items-center justify-around'>
-                <div className='flex items-center justify-center gap-2'>
-                    <Avatar>
-                        <AvatarFallback className='bg-[#8f392d] text-white font-extrabold   '>P</AvatarFallback>
-                    </Avatar>
+            <div className='md:w-7xl w-full flex items-center md:justify-around justify-between'>
+                <div className='flex'>
+                    <Button
+                        variant={'ghost'}
+                        onClick={() => setIsOpen(!isOpen)}
+                        className='flex md:hidden'
+                    >
+                        <Menu width={20} />
+                    </Button>
 
-                    <span className='font-bold text-black'>Pages & Co.</span>
+                    <div className='flex items-center justify-center gap-2'>
+                        <Avatar>
+                            <AvatarFallback className='bg-[#8f392d] text-white font-extrabold'>P</AvatarFallback>
+                        </Avatar>
+
+                        <span className='font-bold text-black'>Pages & Co.</span>
+                    </div>
                 </div>
 
-                <nav className='flex items-center justify-center gap-6'>
+                <nav className='hidden md:flex items-center justify-center gap-6'>
                     {NAV_ITEMS.map((item, index) => (
                         <Link key={index} href={item?.url} className='text-sm'>
                             {item?.label}
@@ -25,10 +44,12 @@ const Header = () => {
                     ))}
                 </nav>
 
-                <SearchBar />
+                <div className='hidden md:block'>
+                    <SearchBar />
+                </div>
 
                 <div className='flex items-center gap-4'>
-                    <Button variant="outline" className='rounded-4xl font-bold px-4'>Sign in</Button>
+                    <Button variant="outline" className='hidden md:block rounded-4xl font-bold px-4'>Sign in</Button>
 
                     <Button
                         className='bg-black text-white font-bold rounded-4xl px-4'
@@ -41,6 +62,11 @@ const Header = () => {
                     </Button>
                 </div>
             </div>
+
+            <Sidebar
+                isOpen={isOpen}
+                onClose={handleCloseSidebar}
+            />
         </header>
     )
 }
