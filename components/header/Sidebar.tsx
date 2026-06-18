@@ -4,6 +4,7 @@ import { X } from 'lucide-react';
 import { Button } from '../ui/button';
 import { NAV_ITEMS } from '@/constants';
 import Link from 'next/link';
+import { useSignInStore } from '@/store/useSignInStore';
 
 interface SidebarProps {
     isOpen: boolean;
@@ -11,6 +12,12 @@ interface SidebarProps {
 }
 
 const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
+    const { setIsOpen } = useSignInStore()
+
+    const handleSignIn = () => {
+        setIsOpen(true)
+    }
+
     return (
         <>
             {isOpen && (
@@ -47,7 +54,7 @@ const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
                 </nav>
 
                 <div className='border-t p-4'>
-                    <Button className='w-full'>Sign In</Button>
+                    <Button className='w-full' onClick={handleSignIn}>Sign In</Button>
                 </div>
             </div>
         </>

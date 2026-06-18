@@ -9,8 +9,10 @@ import { Menu } from 'lucide-react'
 import Sidebar from './Sidebar'
 import { useSignInStore } from '@/store/useSignInStore'
 import { useBagStore } from '@/store/useBagStore'
+import { useRouter } from 'next/navigation'
 
 const Header = () => {
+    const router = useRouter()
     const [isOpen, setIsOpen] = useState(false)
     const { setIsOpen: setIsOpenSignIn } = useSignInStore()
     const { bag, syncFromLocalStorage } = useBagStore()
@@ -75,6 +77,7 @@ const Header = () => {
 
                     <Button
                         className='bg-black text-white font-bold rounded-4xl px-4'
+                        onClick={() => router.push('/bag')}
                     >
                         Bag
 

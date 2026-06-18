@@ -3,7 +3,7 @@ import { create } from "zustand"
 interface State {
     bag: any[],
     setBags: (newBag: any) => void,
-    syncFromLocalStorage: () => void
+    syncFromLocalStorage: () => void,
 }
 
 export const useBagStore = create<State>((set) => ({

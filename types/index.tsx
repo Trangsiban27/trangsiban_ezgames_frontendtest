@@ -7,4 +7,5 @@ export interface ProductTypes {
     rating: number | null,
     tag: string | null,
     color: string,
+    count?: number
 }
