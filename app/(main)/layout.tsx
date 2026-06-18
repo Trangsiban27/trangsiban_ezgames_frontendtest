@@ -9,9 +9,9 @@ const layout = ({ children }: { children: React.ReactNode }) => {
 
             {/* <main className=''>
                 {children}
-            </main>
+            </main> */}
 
-            <Footer /> */}
+            <Footer />
         </div>
     )
 }
