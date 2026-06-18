@@ -16,22 +16,19 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 # trangsiban_ezgames_frontendtest
+Tech stack: NextJS, Typescript, TailwindCss, ShadcnUI, Zustands, React-hook-form, yup, sonner (toast)
+
+##Thời gian hoàn thành: 18 giờ 38 phút
+Bao gồm: phân tích yêu cầu, phân tích layout, setup source, code, review & test
+
+##Các đầu việc đã hoàn thành trong bài test:
+1. Header
+3. Footer
+4. Trang home: Carousel, product list, banner, ....
+4. Trang Books list: chọn category, chọn filter, hiển thị danh sách
+5. Trang Book detail: hiển thị tất cả thông tin của sách theo id, chức năng thêm sách vào giỏ hàng (localstorage)
+6. Trang Bag: Hiển thị tất cả sản phẩm trong giở hàng, chức năng tăng / giảm số lương, chức năng xoá sản phẩm ra khỏi giỏ hàng, tính toán tất cả giá tiền
+7. Sign in dialog
+8. Responsive tất cả các page
+9. Xây dựng các reuse components
