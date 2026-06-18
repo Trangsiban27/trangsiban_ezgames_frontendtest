@@ -3,10 +3,12 @@ import YouMayLikes from '@/components/books/you-may-likes/YouMayLikes'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { BOOKS } from '@/constants'
+import { useBagStore } from '@/store/useBagStore'
 import { Heart, Star } from 'lucide-react'
 import Link from 'next/link'
 import { useParams, useSearchParams } from 'next/navigation'
-import React, { Suspense } from 'react'
+import React, { Suspense, useEffect } from 'react'
+import { toast } from 'sonner'
 
 interface Props {
     id: string | any
@@ -40,10 +42,44 @@ const INFO = [
 ]
 
 const BookDetailPageContent = ({ id }: Props) => {
-
+    const { bag, setBags, syncFromLocalStorage } = useBagStore()
     const bookData = BOOKS.find((item) => item?.id === Number(id))
 
-    console.log(bookData)
+    useEffect(() => {
+        syncFromLocalStorage()
+    }, [syncFromLocalStorage])
+
+    const handlAddToBag = () => {
+        const isAlreadyBook = bag.some((item: any) => item?.id === bookData?.id)
+
+        if (!isAlreadyBook) {
+            const newBag = [
+                ...bag,
+                {
+                    ...bookData,
+                    count: 1
+                }
+            ]
+
+            setBags(newBag)
+        } else {
+            const updatedBags = bag.map((item: any) => {
+
+                if (item?.id === bookData?.id) {
+                    return {
+                        ...item,
+                        count: (item?.count || 1) + 1
+                    }
+                }
+
+                return item
+            })
+
+            setBags(updatedBags)
+        }
+
+        toast.success('Add book to bag successfully!')
+    }
 
     return (
         <div className='my-25 lg:w-7xl w-full flex flex-col'>
@@ -114,7 +150,7 @@ const BookDetailPageContent = ({ id }: Props) => {
                     <p className='w-1/2 text-xs leading-5'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto, mollitia sunt. Suscipit, quod. Facilis, cum amet in sed beatae quis, odit laudantium, obcaecati officiis quasi assumenda! Esse architecto odio minus?</p>
 
                     <div className='flex items-center gap-2'>
-                        <Button className='px-4 rounded-2xl cursor-pointer'>Add to bag -- ${bookData?.price}</Button>
+                        <Button className='px-4 rounded-2xl cursor-pointer' onClick={handlAddToBag}>Add to bag -- ${bookData?.price}</Button>
 
                         <Button
                             variant={'outline'}

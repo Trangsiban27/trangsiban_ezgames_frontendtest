@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar'
 import Link from 'next/link'
 import { NAV_ITEMS } from '@/constants'
@@ -8,10 +8,20 @@ import { Button } from '../ui/button'
 import { Menu } from 'lucide-react'
 import Sidebar from './Sidebar'
 import { useSignInStore } from '@/store/useSignInStore'
+import { useBagStore } from '@/store/useBagStore'
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false)
     const { setIsOpen: setIsOpenSignIn } = useSignInStore()
+    const { bag, syncFromLocalStorage } = useBagStore()
+
+    useEffect(() => {
+        syncFromLocalStorage()
+    }, [syncFromLocalStorage])
+
+    const totalItem = bag.reduce((acc, item) => {
+        return acc + (item?.count || 1)
+    }, 0)
 
     const handleCloseSidebar = () => {
         setIsOpen(false)
@@ -69,7 +79,7 @@ const Header = () => {
                         Bag
 
                         <div className='flex items-center justify-center bg-[#c2941f] px-1.5 rounded-full'>
-                            <span>0</span>
+                            <span>{totalItem}</span>
                         </div>
                     </Button>
                 </div>
