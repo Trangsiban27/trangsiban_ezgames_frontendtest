@@ -41,6 +41,21 @@ export const BOOKS = [
     { "id": 10, "title": "Threads of the Void", "author": "Kai Tanaka", "price": 20.50, "oldPrice": null, "rating": 4.6, "tag": "NEW", "color": "#5b7391" }
 ]
 
+export const YOU_MAY_LIKES = [
+    { "id": 7, "title": "A House of Borrowed Light", "author": "Sofia Marchetti", "price": 17.25, "oldPrice": 22.00, "rating": 4.5, "tag": null, "color": "#6d5885" },
+    { "id": 8, "title": "Hands in the Soil", "author": "Greta Lindqvist", "price": 23.00, "oldPrice": null, "rating": 4.3, "tag": null, "color": "#5f7e6a" },
+    {
+        "id": 3,
+        "title": "Salt & Other Small Gods",
+        "author": "Imani Okafor",
+        "price": 13.00,
+        "oldPrice": null,
+        "rating": 4.8,
+        "tag": "NEW",
+        "color": "#94556e"
+    },
+]
+
 export const FEATURES = [
     {
         "id": 1,

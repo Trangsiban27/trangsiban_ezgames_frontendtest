@@ -1,18 +1,27 @@
+'use client'
 import React from 'react'
 import ListHeader from './ListHeader'
 import { ProductTypes } from '@/types'
 import { Card, CardAction, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card'
 import { Badge } from '../ui/badge'
 import { Star } from 'lucide-react'
+import { useRouter } from 'next/navigation'
 
 interface Props {
     data: ProductTypes
 }
 
 const ProductCard = ({ data }: Props) => {
+    const router = useRouter()
+
+    const handleSelect = () => {
+        router.push(`/books/${data?.id}`)
+    }
+
     return (
         <Card
             className='p-3 rounded-xs hover:shadow hover:-translate-y-1 transition-all duration-300 ease-in-out cursor-pointer'
+            onClick={handleSelect}
         >
             <div
                 style={{
