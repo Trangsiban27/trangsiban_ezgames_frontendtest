@@ -12,7 +12,7 @@ interface Props {
 const ProductCard = ({ data }: Props) => {
     return (
         <Card
-            className='p-3 rounded-xs'
+            className='p-3 rounded-xs hover:shadow hover:-translate-y-1 transition-all duration-300 ease-in-out cursor-pointer'
         >
             <div
                 style={{

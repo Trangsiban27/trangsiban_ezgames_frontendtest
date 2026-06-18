@@ -10,7 +10,7 @@ const BestSeller = () => {
                 subTitle='Most Loved'
                 title='Bestsellers'
                 hasViewAll={true}
-                viewAllUrl=''
+                viewAllUrl='/books'
             />
 
             <div className='grid lg:grid-cols-5 grid-cols-2 gap-6 mt-6'>

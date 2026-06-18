@@ -10,7 +10,7 @@ const FeaturesThisMonth = () => {
                 subTitle={`Editor's Picks`}
                 title='Featured this month'
                 hasViewAll={true}
-                viewAllUrl=''
+                viewAllUrl='/books'
             />
 
             <div className='grid lg:grid-cols-5 md:grid-cols-2 gap-6 mt-6'>

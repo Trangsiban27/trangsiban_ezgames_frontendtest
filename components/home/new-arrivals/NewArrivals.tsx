@@ -10,7 +10,7 @@ const NewArrivals = () => {
                 subTitle='Hot off the press'
                 title='New arrivals'
                 hasViewAll={true}
-                viewAllUrl=''
+                viewAllUrl='/books'
             />
 
             <div className='grid lg:grid-cols-5 md:grid-cols-2 gap-6 mt-6 '>
