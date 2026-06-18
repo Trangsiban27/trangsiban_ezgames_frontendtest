@@ -7,7 +7,7 @@ import { Button } from '../ui/button'
 
 const Header = () => {
     return (
-        <header className='fixed top-0 left-0 right-0 p-4 border-b flex items-center justify-center font-sans bg-background'>
+        <header className='fixed top-0 left-0 right-0 p-4 border-b flex items-center justify-center font-sans bg-background z-10'>
             <div className='w-7xl flex items-center justify-around'>
                 <div className='flex items-center justify-center gap-2'>
                     <Avatar>

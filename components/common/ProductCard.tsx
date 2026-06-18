@@ -21,7 +21,7 @@ const ProductCard = ({ data }: Props) => {
                 } as React.CSSProperties}
             >
                 <div
-                    className="relative bg-[linear-gradient(to_bottom_right,var(--from-color),var(--to-color))] rounded-xs z-20 h-60 p-2"
+                    className="relative bg-[linear-gradient(to_bottom_right,var(--from-color),var(--to-color))] rounded-xs h-60 p-2"
                 >
                     {data?.tag && <div className={`flex items-center  ${data?.tag === 'NEW' ? 'justify-end' : 'justify-start'}`}>
                         <Badge
