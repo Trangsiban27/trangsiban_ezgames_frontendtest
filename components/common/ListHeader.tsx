@@ -17,8 +17,8 @@ const ListHeader = ({ subTitle, title, hasViewAll = false, viewAllUrl = '' }: Pr
                 <h1 className='font-bold text-3xl'>{title}</h1>
             </div>
 
-            {hasViewAll && <Link href={viewAllUrl} className='flex'>
-                View all <MoveRight />
+            {hasViewAll && <Link href={viewAllUrl} className='flex items-center gap-2 text-xs text-primary hover:underline transition-all duration-300'>
+                View all <MoveRight width={12} />
             </Link>}
         </div>
     )
