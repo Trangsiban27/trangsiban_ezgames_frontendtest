@@ -19,7 +19,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 # trangsiban_ezgames_frontendtest
 Tech stack: NextJS, Typescript, TailwindCss, ShadcnUI, Zustands, React-hook-form, yup, sonner (toast)
 
-##Thời gian hoàn thành: 18 giờ 38 phút
+##Thời gian hoàn thành: 12 giờ 38 phút
 Bao gồm: phân tích yêu cầu, phân tích layout, setup source, code, review & test
 
 ##Các đầu việc đã hoàn thành trong bài test:
