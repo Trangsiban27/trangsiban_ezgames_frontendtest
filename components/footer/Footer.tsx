@@ -30,7 +30,7 @@ const Footer = () => {
         <footer
             className='bg-[#2a2321] relative bottom-0 left-0 right-0 flex items-center justify-center w-full'
         >
-            <div className='w-7xl py-20 grid grid-cols-5 gap-6'>
+            <div className='w-7xl pt-10 pb-20 grid grid-cols-5 gap-6'>
                 <div className='flex flex-col gap-4'>
                     <div className='flex items-center gap-2'>
                         <span className='bg-[#be932e] px-3 py-1.5 rounded-full font-bold'>P</span>
