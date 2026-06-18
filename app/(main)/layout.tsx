@@ -1,5 +1,6 @@
 import Footer from '@/components/footer/Footer'
 import Header from '@/components/header/Header'
+import SignInModel from '@/components/sign-in/SignInModel'
 import React from 'react'
 
 const layout = ({ children }: { children: React.ReactNode }) => {
@@ -12,6 +13,8 @@ const layout = ({ children }: { children: React.ReactNode }) => {
             </main>
 
             <Footer />
+
+            <SignInModel />
         </div>
     )
 }

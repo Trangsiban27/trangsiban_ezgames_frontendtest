@@ -7,12 +7,18 @@ import SearchBar from '../common/SearchBar'
 import { Button } from '../ui/button'
 import { Menu } from 'lucide-react'
 import Sidebar from './Sidebar'
+import { useSignInStore } from '@/store/useSignInStore'
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false)
+    const { setIsOpen: setIsOpenSignIn } = useSignInStore()
 
     const handleCloseSidebar = () => {
         setIsOpen(false)
+    }
+
+    const handleSignIn = () => {
+        setIsOpenSignIn(true)
     }
 
     return (
@@ -49,7 +55,13 @@ const Header = () => {
                 </div>
 
                 <div className='flex items-center gap-4'>
-                    <Button variant="outline" className='hidden md:block rounded-4xl font-bold px-4'>Sign in</Button>
+                    <Button
+                        variant="outline"
+                        className='hidden md:block rounded-4xl font-bold px-4 cursor-pointer'
+                        onClick={handleSignIn}
+                    >
+                        Sign in
+                    </Button>
 
                     <Button
                         className='bg-black text-white font-bold rounded-4xl px-4'
